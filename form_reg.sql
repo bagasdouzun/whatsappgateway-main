@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2024 at 08:48 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Waktu pembuatan: 08 Nov 2024 pada 01.10
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `absensi`
+-- Struktur dari tabel `absensi`
 --
 
 CREATE TABLE `absensi` (
@@ -38,17 +38,20 @@ CREATE TABLE `absensi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `absensi`
+-- Dumping data untuk tabel `absensi`
 --
 
 INSERT INTO `absensi` (`id_absensi`, `id_siswa`, `tanggal`, `waktu_masuk`, `waktu_pulang`, `status_masuk`, `status_pulang`) VALUES
-(7, 66, '2024-10-09', '13:39:00', NULL, 'Hadir', 'Tidak Pulang'),
-(8, 65, '2024-10-09', '13:46:44', '13:46:47', 'Hadir', 'Pulang');
+(11, 72, '2024-11-06', '08:57:24', NULL, 'Hadir', 'Tidak Pulang'),
+(12, 73, '2024-11-06', '12:40:22', '12:56:41', 'Hadir', 'Pulang'),
+(13, 72, '2024-11-07', '08:00:20', '08:30:33', 'Hadir', 'Pulang'),
+(14, 74, '2024-11-07', '08:43:42', NULL, 'Hadir', 'Tidak Pulang'),
+(15, 75, '2024-11-07', '09:17:17', NULL, 'Hadir', 'Tidak Pulang');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `siswa_tabel`
+-- Struktur dari tabel `siswa_tabel`
 --
 
 CREATE TABLE `siswa_tabel` (
@@ -65,57 +68,54 @@ CREATE TABLE `siswa_tabel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `siswa_tabel`
+-- Dumping data untuk tabel `siswa_tabel`
 --
 
 INSERT INTO `siswa_tabel` (`id`, `nama`, `nisn`, `absen`, `kelas`, `email`, `telepon`, `alamat`, `tanggal_daftar`, `rfid`) VALUES
-(63, 'ADI BAGAS SETIYAWAN', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-10-09 06:30:39', '123'),
-(64, 'ADI BAGAS SETIYAWAN', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-10-09 03:59:35', '123'),
-(65, 'ADI BAGAS SETIYAWAN', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-10-09 05:59:31', '160806'),
-(66, 'ADI BAGAS SETIYAWAN', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-10-09 06:27:19', '1234567890'),
-(67, 'ADI BAGAS SETIYAWAN', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-10-09 06:29:43', '1234567890'),
-(68, 'BAGAS', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-10-09 06:39:44', '0987654321'),
-(69, 'BAGAS', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-10-09 06:41:27', '0987654321');
+(72, 'ADI BAGAS SETIYAWAN', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-11-06 01:54:24', '0063145085'),
+(73, 'ADI BAGAS SETIYAWAN', '0063145085', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-11-06 05:37:50', '123'),
+(74, 'ADI BAGAS SETIYAWAN', '876', 1, 'XII RPL 1', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-11-07 01:42:40', '876'),
+(75, 'umioo', '1314', 1, 'XII RPL 2', 'adibagassetiyawan16@gmail.com', '083833098296', 'Semanding, Jenangan, Ponorogo', '2024-11-07 02:17:00', '1922');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `absensi`
+-- Indeks untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
   ADD PRIMARY KEY (`id_absensi`),
   ADD KEY `id_siswa` (`id_siswa`);
 
 --
--- Indexes for table `siswa_tabel`
+-- Indeks untuk tabel `siswa_tabel`
 --
 ALTER TABLE `siswa_tabel`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `absensi`
+-- AUTO_INCREMENT untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `siswa_tabel`
+-- AUTO_INCREMENT untuk tabel `siswa_tabel`
 --
 ALTER TABLE `siswa_tabel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `absensi`
+-- Ketidakleluasaan untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
   ADD CONSTRAINT `absensi_ibfk_1` FOREIGN KEY (`id_siswa`) REFERENCES `siswa_tabel` (`id`);
