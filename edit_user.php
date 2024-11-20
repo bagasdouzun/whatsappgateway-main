@@ -36,7 +36,7 @@ if (isset($_POST['update'])) {
 
     if ($update_stmt->affected_rows > 0) {
         echo "User updated successfully!";
-        header('Location: user_list.php');
+        header('Location: list_admin_operator.php');
     } else {
         echo "Error updating user.";
     }
@@ -48,12 +48,12 @@ if (isset($_POST['update'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit User</title>
-    <link rel="stylesheet" href="style_list_admin_operator.css">
+    <title>Edit Admin & Operator</title>
+    <link rel="stylesheet" href="style_edit_user.css">
 </head>
 <body>
     <div class="container">
-        <h2>Edit User</h2>
+        <h2>Edit Admin & Operator</h2>
         <form method="POST" action="">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" value="<?php echo $user['user']; ?>" required><br><br>

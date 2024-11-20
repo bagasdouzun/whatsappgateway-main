@@ -15,12 +15,12 @@ $result = $conn->query($query);
 </head>
 <body>
     <div class="container">
-        <h2>User List</h2>
+        <h2>Admin & Operator List</h2>
         <table border="1">
             <thead>
                 <tr>
                     <th>Username</th>
-                    <th>Level</th>
+                    <th>Role</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
