@@ -10,12 +10,12 @@ $result = $conn->query($query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User List</title>
+    <title>List Admin & Operator</title>
     <link rel="stylesheet" href="style_list_admin_operator.css">
 </head>
 <body>
     <div class="container">
-        <h2>Admin & Operator List</h2>
+        <h2>List Admin & Operator</h2>
         <table border="1">
             <thead>
                 <tr>
