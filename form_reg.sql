@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Nov 2024 pada 01.10
+-- Waktu pembuatan: 20 Nov 2024 pada 05.06
 -- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.0.30
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -51,6 +51,27 @@ INSERT INTO `absensi` (`id_absensi`, `id_siswa`, `tanggal`, `waktu_masuk`, `wakt
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL,
+  `user` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `level` enum('admin','operator') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `user`, `password`, `level`) VALUES
+(1, 'bagas', '$2y$10$njTbLRlnv4atFXdrfUcc4.an8qzm5d7vVnoMwHrcPszA.aQp571HC', 'operator'),
+(2, 'adi', '$2y$10$vKqNgVsAstyRBZaAqqwwqOZxgVToC6PVxTv9klPAgB33jGaJW1geS', 'admin');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `siswa_tabel`
 --
 
@@ -89,6 +110,12 @@ ALTER TABLE `absensi`
   ADD KEY `id_siswa` (`id_siswa`);
 
 --
+-- Indeks untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
 -- Indeks untuk tabel `siswa_tabel`
 --
 ALTER TABLE `siswa_tabel`
@@ -103,6 +130,12 @@ ALTER TABLE `siswa_tabel`
 --
 ALTER TABLE `absensi`
   MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `siswa_tabel`
