@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-// if (!isset ($_SESSION['level']) || $_SESSION['level'] !== 'operator') {
-//     header("Location: login.php");
-//     exit;
-// }
+if (!isset ($_SESSION['level']) || $_SESSION['level'] !== 'operator') {
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
