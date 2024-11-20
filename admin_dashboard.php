@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset ($_SESSION['level']) || $_SESSION['level'] !== 'admin') {
+if (!isset($_SESSION['level']) || $_SESSION['level'] !== 'admin') {
     header("Location: login.php");
     exit;
 }
@@ -13,14 +13,21 @@ if (!isset ($_SESSION['level']) || $_SESSION['level'] !== 'admin') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="sementara_dashboard_style.css">
+    <link rel="stylesheet" href="dashboard_style.css">
 </head>
-
 <body>
-    <div class="container mt-5">
-        <h1>Selamat Datang, <?= htmlspecialchars($_SESSION['user']); ?>!</h1>
-        <p>Anda login sebagai <strong>Admin</strong>.</p>
-        <a href="logout.php" class="btn btn-danger">Logout</a>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Selamat Datang, <?= htmlspecialchars($_SESSION['user']); ?>!</h1>
+            <p>Anda login sebagai <strong>Admin</strong>.</p>
+        </header>
+        
+        <main class="dashboard-main">
+            <div class="button-group">
+                <a href="list_admin_operator.php" class="btn btn-primary">List Admin & Operator</a>
+                <a href="logout.php" class="btn btn-danger">Logout</a>
+            </div>
+        </main>
     </div>
 </body>
 </html>

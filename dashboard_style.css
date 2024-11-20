@@ -1,0 +1,78 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Container */
+.dashboard-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Header */
+.dashboard-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1a73e8;
+}
+
+.dashboard-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Button Group */
+.button-group {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #1a73e8;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #155bb5;
+}
+
+.btn-danger {
+    background-color: #e53935;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c62828;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}

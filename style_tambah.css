@@ -80,6 +80,17 @@ h3 {
     background-color: #5a6268;
 }
 
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin-left: 10px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
 .alert {
     padding: 10px;
     margin-bottom: 20px;
